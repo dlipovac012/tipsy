@@ -18,6 +18,7 @@
 		63BC9CB1253DEE4D00438728 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC9CB0253DEE4D00438728 /* ColorExtensions.swift */; };
 		63BC9CC1253DFEFC00438728 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC9CC0253DFEFC00438728 /* Label.swift */; };
 		63C00DCA253E07F200E45A91 /* LabeledStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C00DC9253E07F200E45A91 /* LabeledStackView.swift */; };
+		63C00DCF253E398400E45A91 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C00DCE253E398400E45A91 /* TextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		63BC9CB0253DEE4D00438728 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		63BC9CC0253DFEFC00438728 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		63C00DC9253E07F200E45A91 /* LabeledStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledStackView.swift; sourceTree = "<group>"; };
+		63C00DCE253E398400E45A91 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				63BC9C98253DEB7200438728 /* UpperSectionView.swift */,
 				63BC9C9D253DEB7C00438728 /* LowerSectionView.swift */,
 				63BC9CC0253DFEFC00438728 /* Label.swift */,
+				63C00DCE253E398400E45A91 /* TextField.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				63C00DCA253E07F200E45A91 /* LabeledStackView.swift in Sources */,
 				63BC9C9E253DEB7C00438728 /* LowerSectionView.swift in Sources */,
 				630F274A253CE3B1001078A2 /* SceneDelegate.swift in Sources */,
+				63C00DCF253E398400E45A91 /* TextField.swift in Sources */,
 				63BC9CC1253DFEFC00438728 /* Label.swift in Sources */,
 				63BC9CB1253DEE4D00438728 /* ColorExtensions.swift in Sources */,
 			);

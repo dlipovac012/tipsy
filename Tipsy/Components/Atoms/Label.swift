@@ -27,9 +27,7 @@ class Label: UILabel {
     private func configureUI() {
         font = UIFont.preferredFont(forTextStyle: .body)
         adjustsFontForContentSizeCategory = true
-        textColor = .secondaryLabel
-//        adjustsFontSizeToFitWidth = true
-//        minimumScaleFactor = 0.75
+        textColor = .systemGray2
         lineBreakMode = .byTruncatingTail
         translatesAutoresizingMaskIntoConstraints = false
     }

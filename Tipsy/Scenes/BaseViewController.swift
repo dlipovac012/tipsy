@@ -12,14 +12,17 @@ class BaseViewController: UIViewController {
     let upperView = UpperSectionView()
     let lowerView = LowerSectionView()
     var billStackView: LabeledStackView!
+    var billTextField: TextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        billStackView = LabeledStackView(title: "Enter bill total", bottomView: Label(title: "Testing label"))
-        
+                
+        billTextField = TextField()
+        billStackView = LabeledStackView(title: "Enter bill total", bottomView: billTextField)
+
         layoutUI()
         layoutBillStackView()
+        layoutTextField()
     }
     
     /**
@@ -33,14 +36,20 @@ class BaseViewController: UIViewController {
         configureLowerView()
     }
     
+    private func layoutTextField() {
+        NSLayoutConstraint.activate([
+            billTextField.bottomAnchor.constraint(equalTo: billStackView.bottomAnchor),
+            billTextField.heightAnchor.constraint(equalToConstant: 36)
+        ])
+    }
+    
     private func layoutBillStackView() {
         upperView.addSubview(billStackView)
-        billStackView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             billStackView.bottomAnchor.constraint(equalTo: upperView.bottomAnchor, constant: -40),
             billStackView.leadingAnchor.constraint(equalTo: upperView.leadingAnchor, constant: 30),
-            billStackView.trailingAnchor.constraint(equalTo: upperView.trailingAnchor, constant: 30),
+            billStackView.trailingAnchor.constraint(equalTo: upperView.trailingAnchor, constant: -30),
             billStackView.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
@@ -49,7 +58,7 @@ class BaseViewController: UIViewController {
      Layout and configure upper part of the view controller
      */
     private func configureUpperView(for percentage: CGFloat!) {
-        upperView.backgroundColor = .primaryColor
+        upperView.backgroundColor = .white
         
         NSLayoutConstraint.activate([
             upperView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -63,7 +72,7 @@ class BaseViewController: UIViewController {
      Layout and configure lower part of the view controller
      */
     private func configureLowerView() {
-        lowerView.backgroundColor = .accentColor
+        lowerView.backgroundColor = .secondaryColor
         
         NSLayoutConstraint.activate([
             lowerView.topAnchor.constraint(equalTo: upperView.bottomAnchor),

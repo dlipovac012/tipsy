@@ -32,13 +32,9 @@ class LabeledStackView: UIStackView {
     private func layoutUI() {
         self.axis = .vertical
         self.distribution = .equalSpacing
+        self.translatesAutoresizingMaskIntoConstraints = false
         
         self.addArrangedSubview(upperLabel)
         self.addArrangedSubview(bottomView)
-        
-        
-//        NSLayoutConstraint.activate([
-//            self.topAnchor.constraint(equalTo: )
-//        ])
     }
 }
