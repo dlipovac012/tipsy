@@ -11,11 +11,15 @@ class BaseViewController: UIViewController {
     
     let upperView = UpperSectionView()
     let lowerView = LowerSectionView()
+    var billStackView: LabeledStackView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        billStackView = LabeledStackView(title: "Enter bill total", bottomView: Label(title: "Testing label"))
+        
         layoutUI()
+        layoutBillStackView()
     }
     
     /**
@@ -29,6 +33,18 @@ class BaseViewController: UIViewController {
         configureLowerView()
     }
     
+    private func layoutBillStackView() {
+        upperView.addSubview(billStackView)
+        billStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            billStackView.bottomAnchor.constraint(equalTo: upperView.bottomAnchor, constant: -40),
+            billStackView.leadingAnchor.constraint(equalTo: upperView.leadingAnchor, constant: 30),
+            billStackView.trailingAnchor.constraint(equalTo: upperView.trailingAnchor, constant: 30),
+            billStackView.heightAnchor.constraint(equalToConstant: 60)
+        ])
+    }
+    
     /**
      Layout and configure upper part of the view controller
      */
@@ -39,7 +55,7 @@ class BaseViewController: UIViewController {
             upperView.topAnchor.constraint(equalTo: view.topAnchor),
             upperView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             upperView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            upperView.heightAnchor.constraint(equalToConstant: view.frame.height * percentage)
+            upperView.heightAnchor.constraint(equalToConstant: view.frame.height * percentage),
         ])
     }
     

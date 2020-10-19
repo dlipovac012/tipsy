@@ -16,6 +16,8 @@
 		63BC9C99253DEB7200438728 /* UpperSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC9C98253DEB7200438728 /* UpperSectionView.swift */; };
 		63BC9C9E253DEB7C00438728 /* LowerSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC9C9D253DEB7C00438728 /* LowerSectionView.swift */; };
 		63BC9CB1253DEE4D00438728 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC9CB0253DEE4D00438728 /* ColorExtensions.swift */; };
+		63BC9CC1253DFEFC00438728 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC9CC0253DFEFC00438728 /* Label.swift */; };
+		63C00DCA253E07F200E45A91 /* LabeledStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C00DC9253E07F200E45A91 /* LabeledStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		63BC9C98253DEB7200438728 /* UpperSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperSectionView.swift; sourceTree = "<group>"; };
 		63BC9C9D253DEB7C00438728 /* LowerSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowerSectionView.swift; sourceTree = "<group>"; };
 		63BC9CB0253DEE4D00438728 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		63BC9CC0253DFEFC00438728 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		63C00DC9253E07F200E45A91 /* LabeledStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,8 +133,8 @@
 		630F27A0253CF667001078A2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				63BC9C98253DEB7200438728 /* UpperSectionView.swift */,
-				63BC9C9D253DEB7C00438728 /* LowerSectionView.swift */,
+				63BC9CBF253DFEBE00438728 /* Atoms */,
+				63BC9CBE253DFEB200438728 /* Molecules */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -141,6 +145,24 @@
 				63BC9CB0253DEE4D00438728 /* ColorExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		63BC9CBE253DFEB200438728 /* Molecules */ = {
+			isa = PBXGroup;
+			children = (
+				63C00DC9253E07F200E45A91 /* LabeledStackView.swift */,
+			);
+			path = Molecules;
+			sourceTree = "<group>";
+		};
+		63BC9CBF253DFEBE00438728 /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				63BC9C98253DEB7200438728 /* UpperSectionView.swift */,
+				63BC9C9D253DEB7C00438728 /* LowerSectionView.swift */,
+				63BC9CC0253DFEFC00438728 /* Label.swift */,
+			);
+			path = Atoms;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,8 +298,10 @@
 				63BC9C99253DEB7200438728 /* UpperSectionView.swift in Sources */,
 				630F274C253CE3B1001078A2 /* BaseViewController.swift in Sources */,
 				630F2748253CE3B1001078A2 /* AppDelegate.swift in Sources */,
+				63C00DCA253E07F200E45A91 /* LabeledStackView.swift in Sources */,
 				63BC9C9E253DEB7C00438728 /* LowerSectionView.swift in Sources */,
 				630F274A253CE3B1001078A2 /* SceneDelegate.swift in Sources */,
+				63BC9CC1253DFEFC00438728 /* Label.swift in Sources */,
 				63BC9CB1253DEE4D00438728 /* ColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
