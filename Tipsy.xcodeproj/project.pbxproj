@@ -13,6 +13,8 @@
 		630F2751253CE3B3001078A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 630F2750253CE3B3001078A2 /* Assets.xcassets */; };
 		630F2754253CE3B3001078A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630F2752253CE3B3001078A2 /* LaunchScreen.storyboard */; };
 		630F279B253CE73A001078A2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 630F279A253CE73A001078A2 /* .gitignore */; };
+		631F5C392540ED00006C0430 /* PercentageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F5C382540ED00006C0430 /* PercentageButtonView.swift */; };
+		635AA0BF253EFE6C007B50E9 /* TipSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635AA0BE253EFE6C007B50E9 /* TipSelectorView.swift */; };
 		63BC9C99253DEB7200438728 /* UpperSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC9C98253DEB7200438728 /* UpperSectionView.swift */; };
 		63BC9C9E253DEB7C00438728 /* LowerSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC9C9D253DEB7C00438728 /* LowerSectionView.swift */; };
 		63BC9CB1253DEE4D00438728 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC9CB0253DEE4D00438728 /* ColorExtensions.swift */; };
@@ -20,23 +22,6 @@
 		63C00DCA253E07F200E45A91 /* LabeledStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C00DC9253E07F200E45A91 /* LabeledStackView.swift */; };
 		63C00DCF253E398400E45A91 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C00DCE253E398400E45A91 /* TextField.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		630F275B253CE3B3001078A2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 630F273C253CE3B1001078A2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 630F2743253CE3B1001078A2;
-			remoteInfo = Tipsy;
-		};
-		630F2766253CE3B4001078A2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 630F273C253CE3B1001078A2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 630F2743253CE3B1001078A2;
-			remoteInfo = Tipsy;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		630F2744253CE3B1001078A2 /* Tipsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tipsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,9 +31,9 @@
 		630F2750253CE3B3001078A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		630F2753253CE3B3001078A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		630F2755253CE3B3001078A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		630F275A253CE3B3001078A2 /* TipsyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		630F2765253CE3B4001078A2 /* TipsyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		630F279A253CE73A001078A2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		631F5C382540ED00006C0430 /* PercentageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageButtonView.swift; sourceTree = "<group>"; };
+		635AA0BE253EFE6C007B50E9 /* TipSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipSelectorView.swift; sourceTree = "<group>"; };
 		63BC9C98253DEB7200438728 /* UpperSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperSectionView.swift; sourceTree = "<group>"; };
 		63BC9C9D253DEB7C00438728 /* LowerSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowerSectionView.swift; sourceTree = "<group>"; };
 		63BC9CB0253DEE4D00438728 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
@@ -59,20 +44,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		630F2741253CE3B1001078A2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		630F2757253CE3B3001078A2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		630F2762253CE3B4001078A2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -95,8 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				630F2744253CE3B1001078A2 /* Tipsy.app */,
-				630F275A253CE3B3001078A2 /* TipsyTests.xctest */,
-				630F2765253CE3B4001078A2 /* TipsyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				63C00DC9253E07F200E45A91 /* LabeledStackView.swift */,
+				635AA0BE253EFE6C007B50E9 /* TipSelectorView.swift */,
 			);
 			path = Molecules;
 			sourceTree = "<group>";
@@ -164,6 +134,7 @@
 				63BC9C9D253DEB7C00438728 /* LowerSectionView.swift */,
 				63BC9CC0253DFEFC00438728 /* Label.swift */,
 				63C00DCE253E398400E45A91 /* TextField.swift */,
+				631F5C382540ED00006C0430 /* PercentageButtonView.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -188,42 +159,6 @@
 			productReference = 630F2744253CE3B1001078A2 /* Tipsy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		630F2759253CE3B3001078A2 /* TipsyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 630F2771253CE3B4001078A2 /* Build configuration list for PBXNativeTarget "TipsyTests" */;
-			buildPhases = (
-				630F2756253CE3B3001078A2 /* Sources */,
-				630F2757253CE3B3001078A2 /* Frameworks */,
-				630F2758253CE3B3001078A2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				630F275C253CE3B3001078A2 /* PBXTargetDependency */,
-			);
-			name = TipsyTests;
-			productName = TipsyTests;
-			productReference = 630F275A253CE3B3001078A2 /* TipsyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		630F2764253CE3B4001078A2 /* TipsyUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 630F2774253CE3B4001078A2 /* Build configuration list for PBXNativeTarget "TipsyUITests" */;
-			buildPhases = (
-				630F2761253CE3B4001078A2 /* Sources */,
-				630F2762253CE3B4001078A2 /* Frameworks */,
-				630F2763253CE3B4001078A2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				630F2767253CE3B4001078A2 /* PBXTargetDependency */,
-			);
-			name = TipsyUITests;
-			productName = TipsyUITests;
-			productReference = 630F2765253CE3B4001078A2 /* TipsyUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -235,14 +170,6 @@
 				TargetAttributes = {
 					630F2743253CE3B1001078A2 = {
 						CreatedOnToolsVersion = 12.0.1;
-					};
-					630F2759253CE3B3001078A2 = {
-						CreatedOnToolsVersion = 12.0.1;
-						TestTargetID = 630F2743253CE3B1001078A2;
-					};
-					630F2764253CE3B4001078A2 = {
-						CreatedOnToolsVersion = 12.0.1;
-						TestTargetID = 630F2743253CE3B1001078A2;
 					};
 				};
 			};
@@ -260,8 +187,6 @@
 			projectRoot = "";
 			targets = (
 				630F2743253CE3B1001078A2 /* Tipsy */,
-				630F2759253CE3B3001078A2 /* TipsyTests */,
-				630F2764253CE3B4001078A2 /* TipsyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -277,20 +202,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		630F2758253CE3B3001078A2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		630F2763253CE3B4001078A2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -301,7 +212,9 @@
 				63BC9C99253DEB7200438728 /* UpperSectionView.swift in Sources */,
 				630F274C253CE3B1001078A2 /* BaseViewController.swift in Sources */,
 				630F2748253CE3B1001078A2 /* AppDelegate.swift in Sources */,
+				635AA0BF253EFE6C007B50E9 /* TipSelectorView.swift in Sources */,
 				63C00DCA253E07F200E45A91 /* LabeledStackView.swift in Sources */,
+				631F5C392540ED00006C0430 /* PercentageButtonView.swift in Sources */,
 				63BC9C9E253DEB7C00438728 /* LowerSectionView.swift in Sources */,
 				630F274A253CE3B1001078A2 /* SceneDelegate.swift in Sources */,
 				63C00DCF253E398400E45A91 /* TextField.swift in Sources */,
@@ -310,34 +223,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		630F2756253CE3B3001078A2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		630F2761253CE3B4001078A2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		630F275C253CE3B3001078A2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 630F2743253CE3B1001078A2 /* Tipsy */;
-			targetProxy = 630F275B253CE3B3001078A2 /* PBXContainerItemProxy */;
-		};
-		630F2767253CE3B4001078A2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 630F2743253CE3B1001078A2 /* Tipsy */;
-			targetProxy = 630F2766253CE3B4001078A2 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		630F2752253CE3B3001078A2 /* LaunchScreen.storyboard */ = {
@@ -505,90 +391,6 @@
 			};
 			name = Release;
 		};
-		630F2772253CE3B4001078A2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RKP4VPKQ54;
-				INFOPLIST_FILE = TipsyTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dlipovac012.TipsyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tipsy.app/Tipsy";
-			};
-			name = Debug;
-		};
-		630F2773253CE3B4001078A2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RKP4VPKQ54;
-				INFOPLIST_FILE = TipsyTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dlipovac012.TipsyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tipsy.app/Tipsy";
-			};
-			name = Release;
-		};
-		630F2775253CE3B4001078A2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RKP4VPKQ54;
-				INFOPLIST_FILE = TipsyUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dlipovac012.TipsyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Tipsy;
-			};
-			name = Debug;
-		};
-		630F2776253CE3B4001078A2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RKP4VPKQ54;
-				INFOPLIST_FILE = TipsyUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dlipovac012.TipsyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Tipsy;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -606,24 +408,6 @@
 			buildConfigurations = (
 				630F276F253CE3B4001078A2 /* Debug */,
 				630F2770253CE3B4001078A2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		630F2771253CE3B4001078A2 /* Build configuration list for PBXNativeTarget "TipsyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				630F2772253CE3B4001078A2 /* Debug */,
-				630F2773253CE3B4001078A2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		630F2774253CE3B4001078A2 /* Build configuration list for PBXNativeTarget "TipsyUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				630F2775253CE3B4001078A2 /* Debug */,
-				630F2776253CE3B4001078A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

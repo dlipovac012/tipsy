@@ -13,16 +13,21 @@ class BaseViewController: UIViewController {
     let lowerView = LowerSectionView()
     var billStackView: LabeledStackView!
     var billTextField: TextField!
+    var tipSelectorStackView: TipSelectorView!
+    var tipSelectorView: LabeledStackView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
                 
         billTextField = TextField()
         billStackView = LabeledStackView(title: "Enter bill total", bottomView: billTextField)
+        
+        tipSelectorStackView = TipSelectorView(for: [10, 20, 30])
+        tipSelectorView = LabeledStackView(title: "Select tip", bottomView: tipSelectorStackView)
 
         layoutUI()
         layoutBillStackView()
-        layoutTextField()
+        layoutTipPercentageStackView()
     }
     
     /**
@@ -45,12 +50,24 @@ class BaseViewController: UIViewController {
     
     private func layoutBillStackView() {
         upperView.addSubview(billStackView)
+        layoutTextField()
         
         NSLayoutConstraint.activate([
             billStackView.bottomAnchor.constraint(equalTo: upperView.bottomAnchor, constant: -40),
             billStackView.leadingAnchor.constraint(equalTo: upperView.leadingAnchor, constant: 30),
             billStackView.trailingAnchor.constraint(equalTo: upperView.trailingAnchor, constant: -30),
             billStackView.heightAnchor.constraint(equalToConstant: 60)
+        ])
+    }
+    
+    private func layoutTipPercentageStackView() {
+        lowerView.addSubview(tipSelectorView)
+        
+        NSLayoutConstraint.activate([
+            tipSelectorView.topAnchor.constraint(equalTo: lowerView.topAnchor, constant: 20),
+            tipSelectorView.leadingAnchor.constraint(equalTo: lowerView.leadingAnchor, constant: 30),
+            tipSelectorView.trailingAnchor.constraint(equalTo: lowerView.trailingAnchor, constant: -30),
+            tipSelectorView.heightAnchor.constraint(equalToConstant: 80)
         ])
     }
     
