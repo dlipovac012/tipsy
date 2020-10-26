@@ -15,6 +15,11 @@
 		630F279B253CE73A001078A2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 630F279A253CE73A001078A2 /* .gitignore */; };
 		631F5C392540ED00006C0430 /* PercentageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F5C382540ED00006C0430 /* PercentageButtonView.swift */; };
 		635AA0BF253EFE6C007B50E9 /* TipSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635AA0BE253EFE6C007B50E9 /* TipSelectorView.swift */; };
+		6385313025441DEF001B79A3 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6385312F25441DEF001B79A3 /* CounterView.swift */; };
+		63853133254630EF001B79A3 /* IncrementDecrementButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63853132254630EF001B79A3 /* IncrementDecrementButton.swift */; };
+		63853136254637CC001B79A3 /* CalculateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63853135254637CC001B79A3 /* CalculateButton.swift */; };
+		6385313925463E90001B79A3 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6385313825463E90001B79A3 /* ResultViewController.swift */; };
+		6385313C254642C4001B79A3 /* KeyboardDismissalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6385313B254642C4001B79A3 /* KeyboardDismissalExtension.swift */; };
 		63BC9C99253DEB7200438728 /* UpperSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC9C98253DEB7200438728 /* UpperSectionView.swift */; };
 		63BC9C9E253DEB7C00438728 /* LowerSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC9C9D253DEB7C00438728 /* LowerSectionView.swift */; };
 		63BC9CB1253DEE4D00438728 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC9CB0253DEE4D00438728 /* ColorExtensions.swift */; };
@@ -34,6 +39,11 @@
 		630F279A253CE73A001078A2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		631F5C382540ED00006C0430 /* PercentageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageButtonView.swift; sourceTree = "<group>"; };
 		635AA0BE253EFE6C007B50E9 /* TipSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipSelectorView.swift; sourceTree = "<group>"; };
+		6385312F25441DEF001B79A3 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		63853132254630EF001B79A3 /* IncrementDecrementButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementDecrementButton.swift; sourceTree = "<group>"; };
+		63853135254637CC001B79A3 /* CalculateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateButton.swift; sourceTree = "<group>"; };
+		6385313825463E90001B79A3 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		6385313B254642C4001B79A3 /* KeyboardDismissalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDismissalExtension.swift; sourceTree = "<group>"; };
 		63BC9C98253DEB7200438728 /* UpperSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperSectionView.swift; sourceTree = "<group>"; };
 		63BC9C9D253DEB7C00438728 /* LowerSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowerSectionView.swift; sourceTree = "<group>"; };
 		63BC9CB0253DEE4D00438728 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
@@ -90,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				630F274B253CE3B1001078A2 /* BaseViewController.swift */,
+				6385313825463E90001B79A3 /* ResultViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -114,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				63BC9CB0253DEE4D00438728 /* ColorExtensions.swift */,
+				6385313B254642C4001B79A3 /* KeyboardDismissalExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -123,6 +135,7 @@
 			children = (
 				63C00DC9253E07F200E45A91 /* LabeledStackView.swift */,
 				635AA0BE253EFE6C007B50E9 /* TipSelectorView.swift */,
+				6385312F25441DEF001B79A3 /* CounterView.swift */,
 			);
 			path = Molecules;
 			sourceTree = "<group>";
@@ -135,6 +148,8 @@
 				63BC9CC0253DFEFC00438728 /* Label.swift */,
 				63C00DCE253E398400E45A91 /* TextField.swift */,
 				631F5C382540ED00006C0430 /* PercentageButtonView.swift */,
+				63853132254630EF001B79A3 /* IncrementDecrementButton.swift */,
+				63853135254637CC001B79A3 /* CalculateButton.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -213,13 +228,18 @@
 				630F274C253CE3B1001078A2 /* BaseViewController.swift in Sources */,
 				630F2748253CE3B1001078A2 /* AppDelegate.swift in Sources */,
 				635AA0BF253EFE6C007B50E9 /* TipSelectorView.swift in Sources */,
+				6385313C254642C4001B79A3 /* KeyboardDismissalExtension.swift in Sources */,
 				63C00DCA253E07F200E45A91 /* LabeledStackView.swift in Sources */,
+				6385313925463E90001B79A3 /* ResultViewController.swift in Sources */,
 				631F5C392540ED00006C0430 /* PercentageButtonView.swift in Sources */,
 				63BC9C9E253DEB7C00438728 /* LowerSectionView.swift in Sources */,
+				63853133254630EF001B79A3 /* IncrementDecrementButton.swift in Sources */,
 				630F274A253CE3B1001078A2 /* SceneDelegate.swift in Sources */,
 				63C00DCF253E398400E45A91 /* TextField.swift in Sources */,
 				63BC9CC1253DFEFC00438728 /* Label.swift in Sources */,
 				63BC9CB1253DEE4D00438728 /* ColorExtensions.swift in Sources */,
+				63853136254637CC001B79A3 /* CalculateButton.swift in Sources */,
+				6385313025441DEF001B79A3 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

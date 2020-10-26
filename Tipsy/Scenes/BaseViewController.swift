@@ -7,27 +7,64 @@
 
 import UIKit
 
+
+protocol CalculateDelegate {
+    func calculateButtonTapped(amount: Float, tip: Int, participants: UInt)
+}
+
 class BaseViewController: UIViewController {
     
     let upperView = UpperSectionView()
     let lowerView = LowerSectionView()
+    let calculateButton = CalculateButton()
+    
+    var calculateDelegate: CalculateDelegate!
+    
     var billStackView: LabeledStackView!
     var billTextField: TextField!
     var tipSelectorStackView: TipSelectorView!
     var tipSelectorView: LabeledStackView!
+    var counterStackView: CounterView!
+    var counterView: LabeledStackView!
+    
+    var resultViewController: ResultViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        resultViewController = ResultViewController()
+        // set delegate
+        calculateDelegate = resultViewController
                 
+        // upper part
         billTextField = TextField()
         billStackView = LabeledStackView(title: "Enter bill total", bottomView: billTextField)
         
+        // middle part
         tipSelectorStackView = TipSelectorView(for: [10, 20, 30])
         tipSelectorView = LabeledStackView(title: "Select tip", bottomView: tipSelectorStackView)
+        
+        // lower part
+        counterStackView = CounterView();
+        counterView = LabeledStackView(title: "Choose split", bottomView: counterStackView)
 
         layoutUI()
         layoutBillStackView()
         layoutTipPercentageStackView()
+        layoutCounterStackView()
+        layoutCalculateButton()
+    }
+    
+    @objc private func calculate() {
+        guard let delegate = calculateDelegate else { return }
+        
+        let amount: Float = (billTextField.text! as NSString).floatValue
+        let tip: Int = tipSelectorStackView.activePercentageValue
+        let participants: UInt = counterStackView.counter
+    
+        delegate.calculateButtonTapped(amount: amount, tip: tip, participants: participants)
+        
+        present(resultViewController, animated: true, completion: nil)
     }
     
     /**
@@ -64,10 +101,34 @@ class BaseViewController: UIViewController {
         lowerView.addSubview(tipSelectorView)
         
         NSLayoutConstraint.activate([
-            tipSelectorView.topAnchor.constraint(equalTo: lowerView.topAnchor, constant: 20),
+            tipSelectorView.topAnchor.constraint(equalTo: lowerView.topAnchor, constant: 30),
             tipSelectorView.leadingAnchor.constraint(equalTo: lowerView.leadingAnchor, constant: 30),
             tipSelectorView.trailingAnchor.constraint(equalTo: lowerView.trailingAnchor, constant: -30),
             tipSelectorView.heightAnchor.constraint(equalToConstant: 80)
+        ])
+    }
+    
+    private func layoutCounterStackView() {
+        lowerView.addSubview(counterView)
+        
+        NSLayoutConstraint.activate([
+            counterView.topAnchor.constraint(equalTo: tipSelectorView.bottomAnchor, constant: 30),
+            counterView.leadingAnchor.constraint(equalTo: lowerView.leadingAnchor, constant: 30),
+            counterView.trailingAnchor.constraint(equalTo: lowerView.trailingAnchor, constant: -30),
+            counterView.heightAnchor.constraint(equalToConstant: 80)
+        ])
+    }
+    
+    private func layoutCalculateButton() {
+        lowerView.addSubview(calculateButton)
+        
+        calculateButton.addTarget(self, action: #selector(calculate), for: .touchUpInside)
+        
+        NSLayoutConstraint.activate([
+            calculateButton.bottomAnchor.constraint(equalTo: lowerView.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            calculateButton.leadingAnchor.constraint(equalTo: lowerView.leadingAnchor, constant: 40),
+            calculateButton.trailingAnchor.constraint(equalTo: lowerView.trailingAnchor, constant: -40),
+            calculateButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     
@@ -99,4 +160,3 @@ class BaseViewController: UIViewController {
         ])
     }
 }
-

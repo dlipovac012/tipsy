@@ -39,7 +39,7 @@ class TipSelectorView: UIStackView {
         self.distribution = .equalSpacing
         
         for value in self.percentageValues {
-            let button = PercentageButtonView(title: "\(value)%", color: .primaryColor, width: 120)
+            let button = PercentageButtonView(value: value, color: .primaryColor, width: 120)
             button.addTarget(self, action: #selector(percentageOptionClicked), for: .touchUpInside)
             
             self.buttons.append(button)
@@ -57,5 +57,6 @@ class TipSelectorView: UIStackView {
         }
         
         sender.changeState()
+        self.activePercentageValue = sender.value
     }
 }

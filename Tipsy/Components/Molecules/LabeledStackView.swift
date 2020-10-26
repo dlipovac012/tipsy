@@ -20,11 +20,14 @@ class LabeledStackView: UIStackView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init<V>(title: String, bottomView: V) where V: UIView {
+    convenience init<V>(title: String, bottomView: V?) where V: UIView {
         self.init(frame: .zero)
         
         self.upperLabel = Label(title: title)
-        self.bottomView = bottomView
+        
+        if bottomView != nil {
+            self.bottomView = bottomView
+        }
         
         layoutUI()
     }
@@ -35,6 +38,11 @@ class LabeledStackView: UIStackView {
         self.translatesAutoresizingMaskIntoConstraints = false
         
         self.addArrangedSubview(upperLabel)
-        self.addArrangedSubview(bottomView)
+        if self.bottomView == nil { return }
+        
+        // center subview horizontally and vertically
+        bottomView.center = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
+        
+        self.addArrangedSubview(bottomView!)
     }
 }

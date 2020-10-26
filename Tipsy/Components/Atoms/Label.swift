@@ -19,9 +19,10 @@ class Label: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(title: String) {
+    convenience init(title: String, color: UIColor = .systemGray2) {
         self.init(frame: .zero)
         self.text = title
+        textColor = color
     }
     
     private func configureUI() {

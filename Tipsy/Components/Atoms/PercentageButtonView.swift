@@ -9,6 +9,7 @@ import UIKit
 
 class PercentageButtonView: UIButton {
     
+    var value: Int!
     var width: CGFloat!
     var active: Bool = false
 
@@ -21,12 +22,14 @@ class PercentageButtonView: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(title: String, color: UIColor, width: CGFloat) {
+    convenience init(value: Int, color: UIColor, width: CGFloat) {
         self.init(frame: .zero)
-        self.setTitle(title, for: .normal)
+        self.value = value
+        self.setTitle("\(value)%", for: .normal)
         self.backgroundColor = .secondaryColor
         self.setTitleColor(.primaryColor, for: .normal)
         self.width = width
+        
         
         configurProps()
     }
