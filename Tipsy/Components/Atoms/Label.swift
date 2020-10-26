@@ -19,10 +19,15 @@ class Label: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(title: String, color: UIColor = .systemGray2) {
+    convenience init(title: String, color: UIColor = .systemGray2, size: CGFloat! = nil) {
         self.init(frame: .zero)
         self.text = title
         textColor = color
+        
+        if size != nil && size > 0 {
+            font = UIFont.systemFont(ofSize: size!)
+        }
+        
     }
     
     private func configureUI() {

@@ -29,6 +29,6 @@ class IncrementDecrementButton: UIButton {
         self.translatesAutoresizingMaskIntoConstraints = false
         
         self.backgroundColor = .grayishGreen
-        setTitleColor(.systemGray2, for: .normal)
+        setTitleColor(.label, for: .normal)
     }
 }

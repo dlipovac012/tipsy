@@ -16,7 +16,7 @@ class BaseViewController: UIViewController {
     
     let upperView = UpperSectionView()
     let lowerView = LowerSectionView()
-    let calculateButton = CalculateButton()
+    let calculateButton = GenericButton(title: "Calculate")
     
     var calculateDelegate: CalculateDelegate!
     
